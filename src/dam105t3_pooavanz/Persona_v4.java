@@ -9,14 +9,16 @@ import java.util.Objects;
 public class Persona_v4 implements Comparable {
     
     private String nombre;
+    private GeneroPersona genero;
     private String DNI;
     private int telefono;
     private String email;
     private LocalDate fechaNaci;
 
-    Persona_v4(String nom, String dni, int tlf, String correo, LocalDate fNaci) {
+    Persona_v4(String nom, GeneroPersona gen, String dni, int tlf, String correo, LocalDate fNaci) {
         
         nombre = nom;
+        genero = gen;
         DNI = dni;
         telefono = tlf;
         email = correo;
@@ -29,6 +31,8 @@ public class Persona_v4 implements Comparable {
     public String getEmail() { return email; }
 
     public LocalDate getFechaNaci() { return fechaNaci; }
+
+    public GeneroPersona getGenero() { return genero; }
     
     public int calcEdad() {
         
@@ -42,7 +46,7 @@ public class Persona_v4 implements Comparable {
 
     public String toString() {
 
-        return "Persona {" + "Nombre = " + nombre + ", DNI = " + DNI + " Telefono = " + telefono + ", Email = " + email + ", Fecha Nacimiento = " + fechaNaci + '}';
+        return "Persona {" + "Nombre = " + nombre + ", Genero = " + genero + ", DNI = " + DNI + " Telefono = " + telefono + ", Email = " + email + ", Fecha Nacimiento = " + fechaNaci + '}';
 
     }
 
